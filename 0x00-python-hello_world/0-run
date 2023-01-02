@@ -1,3 +1,2 @@
 #!/bin/bash
-
-python3 hello.py $PYFILE
+python3 $PYFILE
