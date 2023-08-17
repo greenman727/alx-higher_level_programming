@@ -4,5 +4,3 @@ def simple_delete(a_dictionary, key=""):
        remove_ key = i.pop("i", None):
            if remove_key != None:
                del remove_key
-           else:
-               return None
