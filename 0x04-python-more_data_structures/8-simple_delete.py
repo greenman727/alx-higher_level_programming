@@ -3,6 +3,6 @@ def simple_delete(a_dictionary, key=""):
     for i in a_dictionary:
        remove_ key = i.pop("i", None):
            if remove_key != None:
-               return a_dictionary[i]
+               del remove_key
            else:
                return None
