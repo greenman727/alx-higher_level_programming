@@ -10,5 +10,5 @@ def weight_average(my_list=[]):
         score += tupl[0] * tupl[1]
         weight += tupl[1]
 
-    return (score/weight)
+    return (score / weight)
 
