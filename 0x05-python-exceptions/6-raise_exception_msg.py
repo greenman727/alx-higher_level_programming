@@ -4,3 +4,4 @@ def raise_exception_msg(message=""):
         raise Exception(message)
     except Exception as error:
         print("error")
+        raise
