@@ -4,3 +4,4 @@ def raise_exception():
         print("word")
     except TypeError:
         print("TypeError")
+        raise
