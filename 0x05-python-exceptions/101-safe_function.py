@@ -6,4 +6,4 @@
          return result
      except Exception as error:
          print("Exception: {}".format(error), file=sys.stderr)
-                 return None
+         return None
