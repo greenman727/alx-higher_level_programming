@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 def safe_print_list(my_list=[], x=0):
-    try:
-        my_list = []
-        for x in my_list:
-            if type(x) == int or type(x) == str:
-                my_list.append(x)
-            print(my_list)
+    count = 0
+    for i in range(x):
+        try:
+            print(my_list[i], end="")
+            count += 1
     except IndexError:
-        pass
-    return my_list
+        break
+    print
+    return count
