@@ -6,7 +6,7 @@ class Rectangle:
     """A class to define a Rectangle"""
 
     def __init__(self, width=0, height=0):
-        """Initailizes the rectangle"""
+        """Initializes the rectangle"""
         self.height = height
         self.width = width
 
@@ -46,15 +46,15 @@ class Rectangle:
         """returns the perimeter of the rectangle"""
         if self.__width == 0 or self.__height == 0:
             return 0
-        return (self.__width * 2) + (self__height * 2)
+        return (self.__width * 2) + (self.__height * 2)
 
     def __str__(self):
         """returns printable string representation of the rectangle"""
         string = ""
         if self___width != 0 and self.__height != 0:
-            string += "\n".join("#" * self__width 
+            string += "\n".join("#" * self.__width 
                     for j in range(self.__height))
-            return string
+        return string
 
     def __repr__(self):
         """returns the string representation of the Rectangle"""
