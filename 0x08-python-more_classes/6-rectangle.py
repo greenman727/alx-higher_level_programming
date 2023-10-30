@@ -9,6 +9,7 @@ class Rectangle:
         """Initializes the rectangle"""
         self.height = height
         self.width = width
+        type(self).number_of_instances += 1
 
     @property
     def width(self):
@@ -57,7 +58,7 @@ class Rectangle:
 
     def __repr__(self):
         """returns the string representation of the Rectangle"""
-        return "Rectangle({:}, {:d})".format(self.__width, self.__height)
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
     def __del__(self):
         """prints a message when Rectangle is deleted"""
