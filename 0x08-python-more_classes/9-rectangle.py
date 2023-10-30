@@ -61,7 +61,7 @@ class Rectangle:
 
     def __repr__(self):
         """returns the string representation of the Rectangle"""
-        return "Rectangle({:}, {:d})".format(self.__width, self.__height)
+        return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
     def __del__(self):
         """prints a message when Rectangle is deleted"""
@@ -74,7 +74,7 @@ class Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
         if not isinstance(rect_2, Rectangle):
             raise TypeError("rect_2 must be an instance of Rectangle")
-        if rect_1 >= rect_2:
+        if rect_1.area()>= rect_2.area():
             return rect_1
         return rect_2
 
