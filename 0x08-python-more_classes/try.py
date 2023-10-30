@@ -1,23 +1,24 @@
 #!/usr/bin/python3
-"""Defines a class Rectangle"""
+"""
+Defines a class Rectangle
+"""
 
 
 class Rectangle:
-    """A class to define a Rectangle"""
-
+    """Representation of a rectangle"""
     def __init__(self, width=0, height=0):
         """Initializes the rectangle"""
-        self.height = height
         self.width = width
+        self.height = height
 
     @property
     def width(self):
-        """set the width of the rectangle"""
+        """getter for the private instance attribute width"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """sets the width of the rectangle"""
+        """setter for the private instance attribute width"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value < 0:
@@ -26,12 +27,12 @@ class Rectangle:
 
     @property
     def height(self):
-        """set the height of the rectangle"""
+        """getter for the private instance attribute height"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """sets the height of the rectangle"""
+        """setter for the private instance attribute height"""
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value < 0:
@@ -52,6 +53,6 @@ class Rectangle:
         """returns printable string representation of the rectangle"""
         string = ""
         if self.__width != 0 and self.__height != 0:
-            string += "\n".join("#" * self.__width 
-                    for j in range(self.__height))
+            string += "\n".join("#" * self.__width
+                                for j in range(self.__height))
         return string
