@@ -6,7 +6,7 @@ class Rectangle:
     """A class to define a Rectangle"""
 
     def __init__(self, width=0, height=0):
-        """Initailizes the rectangle"""
+        """Initializes the rectangle"""
         self.height = height
         self.width = width
 
@@ -52,5 +52,6 @@ class Rectangle:
         """returns printable string representation of the rectangle"""
         string = ""
         if self.__width != 0 and self.__height != 0:
-            string += "\n".join("#" * self.__width for j in range(self.__height))
+            string += "\n".join("#" * self.__width 
+                    for j in range(self.__height))
             return string
