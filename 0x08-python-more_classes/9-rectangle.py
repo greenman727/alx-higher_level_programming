@@ -5,10 +5,14 @@
 class Rectangle:
     """A class to define a Rectangle"""
 
+    number_of_instances = 0
+    print_symbol = "#"
+
     def __init__(self, width=0, height=0):
-        """Initailizes the rectangle"""
+        """Initializes the rectangle"""
         self.height = height
         self.width = width
+        type(self).number_of_instances += 1
 
     @property
     def width(self):
@@ -46,14 +50,14 @@ class Rectangle:
         """returns the perimeter of the rectangle"""
         if self.__width == 0 or self.__height == 0:
             return 0
-        return (self.__width * 2) + (self__height * 2)
+        return (self.__width * 2) + (self.__height * 2)
 
     def __str__(self):
         """returns printable string representation of the rectangle"""
         string = ""
-        if self___width != 0 and self.__height != 0:
-            string += "\n".join(str(self.print_symbol) * self__width for j in range(self.__height))
-            return string
+        if self.__width != 0 and self.__height != 0:
+            string += "\n".join(str(self.print_symbol) * self.__width for j in range(self.__height))
+        return string
 
     def __repr__(self):
         """returns the string representation of the Rectangle"""
@@ -66,17 +70,14 @@ class Rectangle:
 
     def bigger_or_equal(rect_1, rect_2):
         """returns the biggest rectangle based on the area"""
-        if is not isinstance(rect_1, Rectangle):
+        if not isinstance(rect_1, Rectangle):
             raise TypeError("rect_1 must be an instance of Rectangle")
-        if is not isinstance(rect_2, Rectangle):
+        if not isinstance(rect_2, Rectangle):
             raise TypeError("rect_2 must be an instance of Rectangle")
-        if rect_1 == rect_2:
+        if rect_1 >= rect_2:
             return rect_1
-        elif rect_1 > rect_2:
-            return rect_1
-        elif rect_2 > rect_1:
-            return rect_1
+        return rect_2
 
     def square(cls, size=0):
         """returns a rectangle with equal width an height"""
-        width == height == size
+        return cls(size, size)
