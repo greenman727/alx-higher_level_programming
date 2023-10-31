@@ -1,0 +1,45 @@
+==============================
+The ``100-matrix_mul`` module
+==============================
+
+Using ``100-matrix_mul``
+------------------------
+
+Importing the function from the module:
+	>>> matrix_mul = __import__("100-matrix_mul").matrix_mul
+
+Checking for no arguments:
+	>>> matrix_mul()
+	Traceback (most recent call last):
+	...
+	TypeError: matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
+
+Checking for too many args:
+	>>> matrix_mul([[2, 3], [4, 6]], [[3, 4], [5, 6]], [[7, 8], [10, 11]])
+	Traceback (most recent call last):
+	...
+	TypeError: matrix_mul() takes 2 positional arguments but 3 were given
+
+Checking for non-number in list in m_a:
+	>>> matrix_mul([["Bob", 2], [2, 3]], [[3, 4], [5, 6]])
+	Traceback (most recent call last):
+	...
+	TypeError: m_a should contain only integers or floats
+
+Checking for non-number in list in m_b:
+	>>> matrix_mul([[1, 2], [3, 4]], [[1, "Ball"], [5, 6]])
+	Traceback (most recent call):
+	...
+	TypeError: m_b should contain only integers or floats
+
+Checking for passing m_b with empty rows:
+	>>> matrix_mul([[2, 3], [3, 4]], [[]])
+	Traceback (most recent call last):
+	...
+	ValueError: m_b can't be empty
+
+checking for regular use:
+	>>> m_a = [[1, 2], [3, 4]]
+	>>> m_b = m_a
+	>>> print(matrix_mul(m_a, m_b))
+	[[1, 7, 2, 10], [1, 7, 2, 10], [3, 15, 6, 22], [3, 15, 6, 22]]
