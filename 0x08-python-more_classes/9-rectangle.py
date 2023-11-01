@@ -14,6 +14,11 @@ class Rectangle:
         self.width = width
         type(self).number_of_instances += 1
 
+    @classmethod
+    def square(cls, size=0):
+        """returns a rectangle with equal width an height"""
+        return cls(size, size)
+
     @property
     def width(self):
         """set the width of the resctangle"""
@@ -79,8 +84,3 @@ class Rectangle:
         if rect_1.area() >= rect_2.area():
             return rect_1
         return rect_2
-
-    @classmethod
-    def square(cls, size=0):
-        """returns a rectangle with equal width an height"""
-        return cls(size, size)
