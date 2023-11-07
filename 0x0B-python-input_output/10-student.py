@@ -3,7 +3,8 @@
 
 
 class Student:
-    """REpresentation of a student"""
+    """Representation of a student"""
+
     def __init__(self, first_name, last_name, age):
         """Initializes a student"""
         self.first_name = first_name
@@ -12,7 +13,7 @@ class Student:
 
     def to_json(self):
         """Retrives a dictionary representation of a Student"""
-        if (typr(attrs) == list and
+        if (type(attrs) == list and
                 all(type(ele) == for ele in attrs)):
             return {k: getattr(self, k) for k in attrs if hasattr(self, k)}
         return self.__dict__
