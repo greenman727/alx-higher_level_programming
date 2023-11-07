@@ -1,0 +1,30 @@
+==================================
+The ``100-lazy_matrix_mul`` module
+==================================
+
+Using ``100-lazy-matrix_mul``
+
+Importing the function from the module:
+	>>> lazy_matrix_mul = __import__("100-lazy_matrix_mul").lazy_matrix_mul
+
+Checking for no arguments:
+	>>> lazy_matrix_mul()
+	Traceback (most recent call last):
+	...
+	TypeError: lazy_matrix_mul() missing 2 required positional arguments: 'm_a, m_b'
+
+Checking for too many arguments:
+	>> lazy_matrix_mul([[1, 2], [4, 5]], [[5, 6], [6, 7]], [8, 9], [9, 10]])
+	Traceback (most recent call last):
+	...
+	TypeError: lazy_matriz_mul() takes 2 positional arguments but 3 were given
+
+Checking for regular use:
+	>>> m_a = [
+	... [1, 2],
+	... [3, 4],
+	... ]
+	>>> m_b = m_a
+	>>> print(lazy_matrix_mul(m_a, m_b))
+	[[7 10]
+	 [15 22]]
