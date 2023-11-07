@@ -1,4 +1,4 @@
-#!//usr/bin/python3
+#!/usr/bin/python3
 """Defines a function to write a file"""
 
 def write_file(filename="", text=""):
