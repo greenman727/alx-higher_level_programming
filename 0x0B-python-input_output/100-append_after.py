@@ -1,11 +1,12 @@
-#1/usr/bin/python3
+#!/usr/bin/python3
 """Defines a function that inserts a line of text to a file"""
 
 
 def append_after(filename="", search_string="", new_string=""):
+    """Inserts a line of text to a file"""
     text = ""
-    with open(filename) as r:
-        for line in r:
+    with open(filename) as i:
+        for line in i:
             text += line
             if search_string in line:
                 text += new_string
